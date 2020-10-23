@@ -18,13 +18,24 @@ def solution(x):
 
     return answer"""
 
-    if x == 0 or x == 1:
+    """if x == 0 or x == 1:
         return x
     else :
-        return solution(x-1) + solution(x-2)    
-    
-    
+        return solution(x-1) + solution(x-2)  """
 
-x = 50
-print(solution(x))
+    answer = 0
+    num1 = 1
+    num2 = 2
+    
+    if x>=2:
+        for i in range(x):
+            answer = num1 + num2
+            num1 = num2
+            num2 = answer
+            i+1
+        return num1
+    else :
+        return x
+
+print(solution(3))
 
